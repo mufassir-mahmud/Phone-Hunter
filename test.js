@@ -10,6 +10,9 @@ const displayPhones = phones =>{
     // console.log(phones);
     const phoneContainer = document.getElementById('phone-container')
     phoneContainer.textContent = '';
+    
+    phones = phones.slice(0,4);
+
     phones.forEach(phone =>{
         console.log(phone);
         const phoneCard = document.createElement('div');
