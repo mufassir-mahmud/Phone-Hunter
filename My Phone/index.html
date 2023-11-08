@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <title>Phone Hunter API</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <title>My Phone</title>
 </head>
 <body>
-    <header class="">
+    <header>
         
     </header>
     <main class="container mx-auto mt-8">
-
-        <section class="my-5">
-          <input type="text" placeholder="Search" class="input input-bordered input-info w-full max-w-xs"  id="search-field"/>
-          <button class="btn btn-outline btn-accent" onclick="handleSearch()">Search</button>
+        <section class="my-4">
+            <input type="text" placeholder="Search" class="input input-bordered input-error w-full max-w-xs" id="input-field" />
+            <button class="btn btn-error" onclick="handleClick()">Search</button>
         </section>
         <section>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -22,11 +23,8 @@
             </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
+    
 
     <script src="test.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
