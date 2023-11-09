@@ -10,8 +10,17 @@ const displayPhones = phones =>{
     // console.log(phones);
     const phoneContainer = document.getElementById('phone-container')
     phoneContainer.textContent = '';
+
+    const showAllContainer = document.getElementById('show-all-container');
+    if(phones.length > 9){
+        showAllContainer.classList.remove('hidden')
+    }
+    else{
+        showAllContainer.classList.add('hidden')
+    }
+
+    phones = phones.slice(0,9)
     
-    phones = phones.slice(0,4);
 
     phones.forEach(phone =>{
         console.log(phone);
@@ -35,8 +44,18 @@ const displayPhones = phones =>{
 
 }
 const handleSearch = () =>{
+    toggleLoadingSpinner(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
     loadPhone(searchText)
+}
+
+
+const toggleLoadingSpinner = (isLoading) =>{
+    const loadingSpinner = document.getElementById('spinner-loading');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden')
+    }
+    
 }
